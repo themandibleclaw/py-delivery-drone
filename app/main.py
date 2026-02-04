@@ -4,7 +4,10 @@ class Cargo:
 
 
 class BaseRobot:
-    def __init__(self, name: str, weight: int, coords: list | None = None) -> None:
+    def __init__(self,
+                 name: str,
+                 weight: int,
+                 coords: list | None = None) -> None:
         coords = coords or [0, 0]
         self.name = name
         self.coords = coords
@@ -27,7 +30,10 @@ class BaseRobot:
 
 
 class FlyingRobot(BaseRobot):
-    def __init__(self, name: str, weight: int, coords : list | None = None) -> None:
+    def __init__(self,
+                 name: str,
+                 weight: int,
+                 coords : list | None = None) -> None:
         coords = coords or [0, 0, 0]
         if len(coords) == 1:
             coords.append(0)
